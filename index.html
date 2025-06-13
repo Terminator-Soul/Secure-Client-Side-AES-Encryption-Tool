@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encrypt and Decrypt Messages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Encrypt and Decrypt Messages</h1>
+    <label for="message">Enter message:</label>
+    <textarea id="message" rows="4" placeholder="Enter message to encrypt"></textarea>
+    
+    <label for="key">Enter encryption key (Password):</label>
+    <input type="password" id="key" placeholder="Enter key for encryption">
+
+    <button onclick="encryptMessage()">Encrypt</button>
+
+    <h3>Encrypted Message:</h3>
+    <textarea id="encryptedMessage" rows="4" readonly></textarea>
+
+    <button onclick="decryptMessage()">Decrypt</button>
+
+    <h3>Decrypted Message:</h3>
+    <textarea id="decryptedMessage" rows="4" readonly></textarea>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
